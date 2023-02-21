@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -25,7 +27,7 @@
         android:layout_marginEnd="15dp"
         android:layout_marginTop="20dp"
         android:textColor="@color/calc_result_text"
-        android:textSize="55sp"
+        android:textSize="45sp"
         android:textStyle="bold"
         tools:text="-11" />
 
@@ -37,10 +39,9 @@
         android:layout_height="match_parent">
 
         <TableRow
-            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="0dp">
-
             <Button
                 android:id="@+id/btnPercent"
                 style="@style/ButtonOperation"
@@ -52,13 +53,12 @@
             <Button
                 android:id="@+id/btnClearAll"
                 style="@style/ButtonOperation"
-                android:text="@string/btn_calc_clearE" />
+                android:text="@string/btn_calc_clearAll" />
             <Button
                 android:id="@+id/btnBackspace"
                 style="@style/ButtonOperation"
-                android:text="@string/btn_calc_clearE" />
+                android:text="@string/btn_calc_backspace"/>
         </TableRow>
-
         <TableRow
             android:layout_width="match_parent"
             android:layout_weight="1"
@@ -70,15 +70,15 @@
             <Button
                 android:id="@+id/btnSquare"
                 style="@style/ButtonOperation"
-                android:text="@string/btn_calc_inverse" />
+                android:text="@string/btn_calc_square" />
             <Button
                 android:id="@+id/btnSqrt"
                 style="@style/ButtonOperation"
-                android:text="@string/btn_calc_inverse" />
+                android:text="@string/btn_calc_sqrt" />
             <Button
                 android:id="@+id/btnDivide"
                 style="@style/ButtonOperation"
-                android:text="@string/btn_calc_inverse" />
+                android:text="@string/btn_calc_divide" />
         </TableRow>
 
         <TableRow
@@ -133,6 +133,7 @@
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="0dp">
+
             <Button
                 android:id="@+id/btn1"
                 style="@style/ButtonDigit"
@@ -169,9 +170,11 @@
                 style="@style/ButtonDigit"
                 android:text="@string/btn_calc_comma"/>
             <Button
-                android:id="@+id/btnSum"
+                android:id="@+id/btnEqual"
                 style="@style/ButtonEqual"
                 android:text="@string/btn_calc_sum"/>
         </TableRow>
+
     </TableLayout>
+
 </LinearLayout>
