@@ -123,6 +123,10 @@ public class CalcActivity extends AppCompatActivity {
     }
 
     private void digitClick( View v ) {
+        if (needClear) {
+            tvHistory.setText("");
+        }
+
         String result = tvResult.getText().toString() ;
         if( result.length() >= 10 ) return ;
 
@@ -226,6 +230,12 @@ public class CalcActivity extends AppCompatActivity {
         tvHistory.setText( tvHistory.getText().toString() + " " + result + " =" ) ;
         if( operation.equals( getString( R.string.btn_calc_plus ) ) ) {
             setArgument( argument1 + argument2 ) ;
+        } else if( operation.equals( getString( R.string.btn_calc_minus ) ) ) {
+            setArgument( argument1 - argument2 ) ;
+        } else if( operation.equals( getString( R.string.btn_calc_multiplication ) ) ) {
+            setArgument( argument1 * argument2 ) ;
+        } else if( operation.equals( getString( R.string.btn_calc_divide ) ) ) {
+            setArgument( argument1 / argument2 ) ;
         }
     }
 }
