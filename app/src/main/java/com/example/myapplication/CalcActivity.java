@@ -61,6 +61,28 @@ public class CalcActivity extends AppCompatActivity {
         findViewById( R.id.btnMultiplication ).setOnClickListener( this::operationClick ) ;
         findViewById( R.id.btnDivide ).setOnClickListener( this::operationClick ) ;
         findViewById( R.id.btnEqual ).setOnClickListener( this::equalClick ) ;
+
+        findViewById( R.id.btnSquare ).setOnClickListener( this::squareClick ) ;
+        findViewById( R.id.btnSqrt ).setOnClickListener( this::sqrtClick ) ;
+    }
+
+    private void sqrtClick(View view) {
+        String result = tvResult.getText().toString() ;
+
+        double resultDouble = getArgument(result);
+        tvHistory.setText("sqrt(" + resultDouble + ")");
+        resultDouble = Math.sqrt(resultDouble);
+
+        setArgument(resultDouble);
+    }
+
+    private void squareClick(View view) {
+        String result = tvResult.getText().toString() ;
+
+        double resultDouble = getArgument(result);
+        resultDouble = resultDouble * resultDouble;
+
+        setArgument(resultDouble);
     }
 
     /**
